@@ -1,5 +1,32 @@
 
 
+function start() {
+    const movingBox = document.querySelector('#animate')
+
+    let position = 0; 
+    
+    
+
+    const interval = setInterval(frame,5);
+    function frame() {
+        position ++;
+    
+            // movingBox.style.top = position + 'px';
+            // movingBox.style.left = position + 'px';
+    
+        if (position < 350) {
+            movingBox.style.top = position + 'px';
+            movingBox.style.left = position + 'px';
+        } else{
+            clearInterval(interval);
+        }
+    
+    }
+    
+}
+
+
+
 function move() {
     const movingBox = document.querySelector('#animate')
 
@@ -27,14 +54,14 @@ function move() {
          
     })
 
-    return promise;
+    // return promise;
 
      
 }
 
 
 
-function reset1() {
+function reset() {
     const movingBox = document.querySelector('#animate');
 
     
@@ -47,7 +74,7 @@ function reset1() {
 }
 
 
-function reset() {
+function automaticReset() {
     const movingBox = document.querySelector('#animate')
 
     
@@ -66,7 +93,7 @@ function reset() {
         
     })
 
-    return promise;
+    // return promise;
 
     
 }
@@ -74,7 +101,7 @@ function reset() {
 const result = async function(){ 
     try {
         await move();
-        await reset();
+        await automaticReset();
     } catch(err){
         console.log(err);
     }
