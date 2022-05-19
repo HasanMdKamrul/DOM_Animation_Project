@@ -54,7 +54,7 @@ function move() {
          
     })
 
-    // return promise;
+    return promise;
 
      
 }
@@ -81,7 +81,7 @@ function automaticReset() {
 
     const promise = new Promise(function(resolve, reject) {
 
-        setInterval(function() {
+        setTimeout(function() {
 
             let position; 
             position = 0;
@@ -93,7 +93,7 @@ function automaticReset() {
         
     })
 
-    // return promise;
+    return promise;
 
     
 }
