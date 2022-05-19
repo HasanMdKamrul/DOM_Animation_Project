@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: rgb(177, 231, 231);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #container{
+
+            height: 400px;
+            width: 400px;
+            background-color: rgb(19, 32, 55);
+            position: relative;
+        }
+
+        #animate{
+            height: 50px;
+            width: 50px;
+            background-color: rgb(44, 207, 16);
+            position: absolute;
+        }
+
+        #btn{
+            display: flex;
+            justify-content: center;
+        }
+        #btn button{
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+<div id="main">
+        <!-- ** Markup for Animations ** -->
+
+    <!-- ** Big Box with color red -->
+
+    <div id="container">
+
+        <!-- ** Animation box -->
+
+        <div id="animate">
+
+        </div>
+
+    </div>
+
+    <div id="btn">
+        <button onclick="result()">Automatic restart</button>
+
+        <button onclick="move()">Start</button>
+
+        <button onclick="reset1()">Reset</button>
+    </div>
+</div>
+
+    
+
+    <!-- <button onclick="stop()">Stop</button> -->
+
+
+
+    <script src="./JS/domAnimation.js"></script>
+</body>
+</html>
